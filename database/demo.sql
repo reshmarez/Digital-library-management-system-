@@ -37,6 +37,7 @@ CREATE TABLE book_issues (
     KEY book_issues_ibfk_2 (access_no)
 ) ENGINE = InnoDB AUTO_INCREMENT = 68 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = 'Table for tracking book issues'
 
+    ---------------------------------
 
 
     // report table //
@@ -46,6 +47,8 @@ CREATE TABLE report (
     count int(11) DEFAULT NULL,
     PRIMARY KEY (category)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci
+
+    ---------------------------------------
 
 
     // pre_booking table //
@@ -65,6 +68,8 @@ CREATE TABLE pre_bookings (
     ),
     PRIMARY KEY (id)
 ) ENGINE = InnoDB AUTO_INCREMENT = 19 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = 'Table for storing pre-bookings'
+
+    -----------------------------------------------
 
 
     // booksss table //
