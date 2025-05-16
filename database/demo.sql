@@ -11,6 +11,8 @@
     UNIQUE KEY username (username)
 ) ENGINE = InnoDB AUTO_INCREMENT = 10 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci
 
+    -----------------------------------------
+
 // book issues table //
     
 CREATE TABLE book_issues (
