@@ -88,6 +88,8 @@ CREATE TABLE booksss (
     UNIQUE KEY access_no (access_no)
 ) ENGINE = InnoDB AUTO_INCREMENT = 135 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = 'Table for storing book records'
 
+    ------------------------------------------------
+    
 
     // user_feedback table //
     
@@ -97,6 +99,9 @@ CREATE TABLE user_feedback (
     email varchar(255) DEFAULT NULL,
     message text DEFAULT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci
+
+    -----------------------------------------------------
+    
 
     // stureg table //
     
@@ -111,6 +116,10 @@ year enum('1st', '2nd', '3rd') DEFAULT NULL,
 PRIMARY KEY (id)
 )
 
+    ------------------------------------------------------
+
+    
+
     // staff table //
     
 CREATE TABLE staff (
@@ -123,6 +132,10 @@ PRIMARY KEY (id),
 UNIQUE KEY email (email),
 UNIQUE KEY phone (phone)
 ); 
+
+-------------------------------------------------------
+
+
 
 // bookss table //
     
@@ -142,11 +155,17 @@ CREATE TABLE Bookss (
     UNIQUE KEY access_no (access_no)
 ) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table for storing book records';
 
+---------------------------------------------------
+
+
 // book_issues sample data //
     
 INSERT INTO book_issues (access_no, book_name, author_name, receiver, student_name, class, year, student_id, contact, staff_name, department, issued_date, due_date, return_date, status, fine_amount) VALUES
 ('A001', 'Data Structures', 'Mark Allen', 'student', 'Alice Brown', 'ug', '2nd', 'UG2021001', '9876543210', NULL, NULL, '2025-05-01', '2025-05-15', NULL, 'issued', 0.00000),
 ('A002', 'Operating Systems', 'Andrew Tanenbaum', 'staff', NULL, NULL, NULL, NULL, NULL, 'Dr. Sarah Lee', 'Computer Science', '2025-04-25', '2025-05-09', '2025-05-06', 'returned', 0.00000);
+
+-----------------------------------------------------------
+
 
 // report sample data //
     
@@ -155,11 +174,18 @@ INSERT INTO report (category, count) VALUES
 ('returned', 22),
 ('overdue', 5);
 
+-------------------------------------------------------------
+
+
+
 // pre_bookings sample data //
     
 INSERT INTO pre_bookings (user_type, name, class, department, book_name, author_name) VALUES
 ('student', 'Emily Clark', 'ug', 'Physics', 'Quantum Mechanics', 'Stephen Gasiorowicz'),
 ('staff', 'Prof. Alan Watts', NULL, 'Philosophy', 'Eastern Thought', 'Alan Watts');
+
+--------------------------------------------------------------
+
 
 // booksss sample data //
     
@@ -167,11 +193,17 @@ INSERT INTO booksss (access_no, name, author, price, total_quantity, avail_quant
 ('B001', 'Database Systems', 'Elmasri & Navathe', 45.00, 5, 3, 'Computer Science'),
 ('B002', 'Introduction to Algorithms', 'Cormen et al.', 60.00, 3, 1, 'Algorithms');
 
+--------------------------------------------------------------
+
+
 // user_feedback sample data //
     
 INSERT INTO user_feedback (feedback_id, name, email, message) VALUES
 (1, 'Anna Walker', 'anna@example.com', 'Great library system! Easy to use.'),
 (2, 'Bob Martin', 'bob@example.com', 'Please add more computer science books.');
+
+-----------------------------------------------------------
+
 
 // stureg sample data //
     
@@ -179,11 +211,17 @@ INSERT INTO stureg (name, department, id, phone, mail, class, year) VALUES
 ('Tom Hardy', 'Electrical Engineering', 101, '9123456780', 'tom@example.com', 'ug', '1st'),
 ('Sara Connor', 'Mechanical Engineering', 102, '9876504321', 'sara@example.com', 'pg', '2nd');
 
+-----------------------------------------------------------
+
+
 // staff sample data //
     
 INSERT INTO staff (name, department, phone, email) VALUES
 ('Dr. Richard Miles', 'Mathematics', '9012345678', 'richard.miles@example.com'),
 ('Ms. Jenny Blake', 'Library Science', '9023456789', 'jenny.blake@example.com');
+
+------------------------------------------------------------
+
 
 // bookss sample data //
     
