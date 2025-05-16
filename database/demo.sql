@@ -1,4 +1,5 @@
-CREATE TABLE login (
+// user login //
+    CREATE TABLE login (
     id int(10) unsigned NOT NULL AUTO_INCREMENT,
     username varchar(50) NOT NULL,
     password varchar(255) NOT NULL,
@@ -10,7 +11,8 @@ CREATE TABLE login (
     UNIQUE KEY username (username)
 ) ENGINE = InnoDB AUTO_INCREMENT = 10 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci
 
-
+// book issues table //
+    
 CREATE TABLE book_issues (
     id int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
     access_no varchar(50) NOT NULL COMMENT 'Book Accession Number',
@@ -35,6 +37,8 @@ CREATE TABLE book_issues (
 
 
 
+    // report table //
+    
 CREATE TABLE report (
     category varchar(50) NOT NULL,
     count int(11) DEFAULT NULL,
@@ -42,6 +46,8 @@ CREATE TABLE report (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci
 
 
+    // pre_booking table //
+    
 CREATE TABLE pre_bookings (
     id int(11) NOT NULL AUTO_INCREMENT,
     user_type varchar(50) NOT NULL,
@@ -59,6 +65,8 @@ CREATE TABLE pre_bookings (
 ) ENGINE = InnoDB AUTO_INCREMENT = 19 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = 'Table for storing pre-bookings'
 
 
+    // booksss table //
+    
 CREATE TABLE booksss (
     id int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
     create_time datetime DEFAULT current_timestamp() COMMENT 'Create Time',
@@ -74,6 +82,8 @@ CREATE TABLE booksss (
 ) ENGINE = InnoDB AUTO_INCREMENT = 135 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = 'Table for storing book records'
 
 
+    // user_feedback table //
+    
 CREATE TABLE user_feedback (
     feedback_id int(11) NOT NULL,
     name varchar(255) DEFAULT NULL,
@@ -81,6 +91,8 @@ CREATE TABLE user_feedback (
     message text DEFAULT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci
 
+    // stureg table //
+    
 CREATE TABLE stureg (
 name varchar(255) NOT NULL,
 department varchar(255) NOT NULL,
@@ -92,6 +104,8 @@ year enum('1st', '2nd', '3rd') DEFAULT NULL,
 PRIMARY KEY (id)
 )
 
+    // staff table //
+    
 CREATE TABLE staff (
 id int(10) NOT NULL AUTO_INCREMENT,
 name varchar(30) NOT NULL,
@@ -103,6 +117,8 @@ UNIQUE KEY email (email),
 UNIQUE KEY phone (phone)
 ); 
 
+// bookss table //
+    
 CREATE TABLE Bookss (
     id INT(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
     create_time DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Create Time',
